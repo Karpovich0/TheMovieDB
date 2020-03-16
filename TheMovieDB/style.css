@@ -1,0 +1,286 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 70px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header__wrap {
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    margin: 3px auto;
+    padding: 10px;
+    background-color: #fff;
+    z-index: 1000;
+    top: 0;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0 0 3px #ccc;
+}
+
+.home {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    background-color: rgb(251, 15, 15);
+    width: 200px;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 1px 0 1px;
+    height: auto;
+}
+
+.search__form {
+    width: 100%;
+}
+
+.search__line {
+    display: flex;
+    justify-content: center;
+}
+
+.search__text {
+    padding: 7px 10px;
+    width: 315px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    background-color: #f1f1f1;
+    height: 31px;
+    font-size: 14px;
+    font-weight: 700;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+}
+
+.search__icon {
+    width: 13px;
+}
+
+.search__results {
+    cursor: pointer;
+    display: none;
+    width: 315px;
+    z-index: 100;
+    top: 45px;
+    position: absolute;
+    border: 1px solid #f1f1f1;
+    border-radius: 6px;
+    margin: 2px auto;
+    height: auto;
+    background-color: #fff;
+}
+
+.search__res {
+    border-radius: 6px;
+    font-weight: 700;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: #424141;
+    padding: 8px 5px 0px;
+}
+
+.search__res::after {
+    content: "";
+    display: block;
+    width: 99%;
+    height: 1px;
+    background-color: rgb(153, 153, 153);
+    margin-top: 5px;
+    margin-bottom: -1px;
+}
+
+.search__res:hover {
+    background-color: rgb(153, 153, 153);
+}
+
+
+/* Title */
+
+.title__div {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+/* Trending */
+
+.trending {
+    margin: 0 auto;
+    display: block;
+    width: 1000px;
+}
+
+.trending__moviess {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.trending__film {
+    background-color: black;
+    overflow: hidden;
+    position: relative;
+    width: 19.7%;
+    margin-bottom: 5px;
+}
+
+.trending__poster {
+    display: block;
+    max-width: 100%;
+    transition: all .2s linear;
+}
+
+.trending__film:hover .trending__poster {
+    opacity: .4;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.trending__film:hover .trending__details {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.trending__details {
+    width: 100%;
+    font-style: 18px;
+    font-weight: 700;
+    color: blanchedalmond;
+    opacity: 0;
+    text-align: center;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+    transition: opacity .2s linear;
+}
+
+
+/* Film */
+
+.film {
+    margin: 0 auto;
+    display: none;
+    width: 1000px;
+    flex-wrap: wrap;
+}
+
+.film__poster {
+    width: 32%;
+}
+
+.film__img {
+    max-width: 100%;
+}
+
+.film__main {
+    width: 68%;
+}
+
+.film__head {
+    padding: 0 10px;
+}
+
+.film__overview {
+    text-align: justify;
+    padding: 10px;
+}
+
+.film__overview::before {
+    margin-bottom: 5px;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+}
+
+.film__overview_text {
+    padding-top: 10px;
+}
+
+
+/*Film recommendation  */
+
+.film__rec {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.film__rec_head {
+    padding: 10px 0;
+}
+
+.h3__rec {
+    text-transform: uppercase;
+}
+
+.film__rec_text {
+    display: flex;
+}
+
+.film__rec_item {
+    height: 134px;
+    width: 9.5%;
+    margin-right: 6px;
+    background-color: black;
+    overflow: hidden;
+    position: relative;
+}
+
+.film__rec_item:last-child {
+    margin-right: none;
+}
+
+.rec__poster {
+    display: block;
+    max-width: 100%;
+    transition: all .2s linear;
+}
+
+.film__rec_item:hover .rec__poster {
+    opacity: .4;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.film__rec_item:hover .rec__title {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.rec__title {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 700;
+    color: blanchedalmond;
+    opacity: 0;
+    text-align: center;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+    transition: opacity .2s linear;
+}
